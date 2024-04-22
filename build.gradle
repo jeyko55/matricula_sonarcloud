@@ -27,14 +27,15 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation "org.springframework.boot:spring-boot-starter-web"
 }
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
 sonar {
   properties {
     property "sonar.projectKey", "jeyko55_matricula_sonarcloud"
     property "sonar.organization", "jeyko55"
     property "sonar.host.url", "https://sonarcloud.io"
   }
-}
-
-tasks.named('test') {
-	useJUnitPlatform()
 }
