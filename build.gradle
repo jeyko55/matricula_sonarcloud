@@ -5,6 +5,14 @@ plugins {
 	id "org.sonarqube" version "4.4.1.3373"
 }
 
+sonar {
+  properties {
+    property "sonar.projectKey", "jeyko55_matricula_sonarcloud"
+    property "sonar.organization", "jeyko55"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
+
 group = 'com.udea'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
@@ -30,12 +38,4 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
-}
-
-sonar {
-  properties {
-    property "sonar.projectKey", "jeyko55_matricula_sonarcloud"
-    property "sonar.organization", "jeyko55"
-    property "sonar.host.url", "https://sonarcloud.io"
-  }
 }
